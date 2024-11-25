@@ -23,13 +23,30 @@ document.getElementById("add-task-btn").addEventListener("click", () => {
   const taskTime = document.getElementById("task-time").value;
 
   if (taskName && taskDate && taskTime) {
+    // Create task item with delete button
     const li = document.createElement("li");
     li.textContent = `${taskName} - ${taskDate} @ ${taskTime}`;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete-btn";
+    deleteBtn.addEventListener("click", () => {
+      li.remove();
+    });
+
+    li.appendChild(deleteBtn);
     taskList.appendChild(li);
 
+    // Add task to scheduled list with delete button
     const scheduledLi = li.cloneNode(true);
+    const scheduledDeleteBtn = scheduledLi.querySelector(".delete-btn");
+    scheduledDeleteBtn.addEventListener("click", () => {
+      scheduledLi.remove();
+    });
+
     scheduledTaskList.appendChild(scheduledLi);
 
+    // Clear inputs
     document.getElementById("new-task").value = "";
     document.getElementById("task-date").value = "";
     document.getElementById("task-time").value = "";
