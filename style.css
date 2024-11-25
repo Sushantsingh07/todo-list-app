@@ -70,13 +70,13 @@ body {
   }
   
   .filter-btn {
-    background: #ca8bfe;
-    /* padding: 5px 15px;
+   /* background: #ca8bfe;
+    padding: 5px 15px;
     margin-right: 10px;
      
     border: none;
-    border-radius: 5px; */
-    cursor: pointer;
+    border-radius: 5px; 
+    cursor: pointer;*/
   }
   
   .filter-btn:hover {
@@ -141,5 +141,19 @@ body {
   .settings-group input[type="checkbox"] {
     margin-right: 10px;
   }
+  .delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #f3617a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background: #d94a60;
+  }
+  
  
   
